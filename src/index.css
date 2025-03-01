@@ -1,0 +1,91 @@
+:root {
+  --blue-900: #13183f;
+  --blue-600: #666ca3;
+  --pink-600: #f74780;
+  --pink-300: #ffa7c3;
+  --grey: #83869a;
+  --white: #fff;
+  --gradient-pink: linear-gradient(0deg, #f02aa6 0%, #ff6f48 100%);
+  --gradient-purple: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+  --padding-inline: 12.5vw;
+
+
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+
+}
+
+@media (max-width: 1200px) {
+  body {
+    --padding-inline: 5vw;
+  }
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
