@@ -112,9 +112,23 @@ function Hero() {
         <Button type="orange">Get Started</Button>
       </HeroContentContainer>
       {isMobile ? (
-        <img src="./images/image-hero-mobile@2x.png" alt="hero" />
+        <img
+          srcSet="/images/images-hero-mobile.png 600w, /images/image-hero-mobile@2x.png 1200w"
+          sizes="(min-width: 770px) 600px, 1200px"
+          alt="hero"
+        />
+      ) : isTablet ? (
+        <img
+          srcSet="/images/images-hero-tablet.png 600w, /images/image-hero-tablet@2x.png 1200w"
+          sizes="(max-width: 600px) 600px, 1200px"
+          alt="hero"
+        />
       ) : (
-        isTablet ? <img src="./images/image-hero-tablet@2x.png" alt="hero" />  : <img src="./images/image-hero-desktop@2x.png" alt="hero" />
+        <img
+          srcSet="/images/images-hero-desktop.png 600w, /images/image-hero-desktop@2x.png 1200w"
+          sizes="(max-width: 600px) 600px, 1200px"
+          alt="hero"
+        />
       )}
     </StyledHero>
   );
